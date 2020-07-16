@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_webview/advencedWebviewExample.dart';
 import 'package:flutter_webview/simpleExample.dart';
 
 class HomePage extends StatefulWidget {
@@ -24,6 +25,12 @@ class _HomePageState extends State<HomePage> {
                           builder: (context) => SimpleExample()));
                     },
                     child: Text("Simple webview example")),
+                      RaisedButton(
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => AdvencedWebViewExample()));
+                    },
+                    child: Text("Advenced webview example")),
               ],
             )),
       ),
